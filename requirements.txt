@@ -1,5 +1,5 @@
 streamlit
-speech_recognition
+SpeechRecognition
 pyaudio
 pydub
 google-cloud-speech
