@@ -46,7 +46,8 @@ elif language == "French":
 
 # Add a button to start and stop the speech recognition process
 if st.button("Start Speech Recognition"):
-    with sr.Microphone() as source:
+    with sr.Microphone(device_index=0) as source:
+
         st.markdown("<h3 style='text-align: center;'>Listening...</h3>", unsafe_allow_html=True)
 
         # Use a loop to continuously listen for speech and transcribe it
