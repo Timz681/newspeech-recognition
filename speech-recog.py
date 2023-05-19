@@ -13,8 +13,8 @@ def transcribe_speech(recognizer, audio):
         return text
     except sr.UnknownValueError:
         return "Speech Recognition could not understand audio"
-    except sr.RequestError as e:
-        return f"Error: Could not connect to the speech recognition service. {e}"
+    except sr.RequestError:
+        return "Could not connect to the speech recognition service"
 
 def save_transcribed_text(text):
     # Add your code here to save the transcribed text to a file
